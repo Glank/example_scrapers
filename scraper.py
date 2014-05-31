@@ -1,3 +1,5 @@
+#Author: Ernest Kirstein
+
 from BeautifulSoup import BeautifulSoup
 import urllib2   
 
