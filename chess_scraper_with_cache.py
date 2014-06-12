@@ -9,6 +9,15 @@ def get_page_html(page_url):
     response = urllib2.urlopen(page_url)
     html = response.read()
     return html
+def get_cached_page_html(page_url):
+    #either retrieve the page from the cache, 
+    #or download the page and memoize it in the cache.
+    if page_url in Cache:
+        return Cache[page_url]
+    page_html = get_page_html(page_url)
+    Cache[page_url] = page_html
+    return page_html
+
 
 def get_front_page_article_urls():
     #get the front page html and put it through BeautifulSoup
@@ -27,7 +36,7 @@ def get_front_page_article_urls():
 
 def get_article_pgn_urls(article_url):
     #get the article html and put it through BeautifulSoup
-    html = get_page_html(article_url)
+    html = get_cached_page_html(article_url)
     soup = BeautifulSoup(html)
     #get all of the hyper links
     links = soup.findAll('a')

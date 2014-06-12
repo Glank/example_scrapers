@@ -1,7 +1,7 @@
 Example Scrapers in Python
 =============
 
-These are two fairly simple scrapers.
+These are three fairly simple scrapers.
 
 The first is `chess_scraper.py` which scrapes pgn data from the front page articles of ChessBase.com.
 
