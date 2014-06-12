@@ -54,13 +54,20 @@ class __Cache__:
             pickle.dump(item, f)
         __save_cache_index__()
 
+def __print_usage_and_die__():
+    print """
+    Usage:
+        python simple_cache.py clear
+    """
+    exit()
+
 Cache = __Cache__()
 
 if __name__=="__main__":
     import sys
     if len(sys.argv)!=2:
-        exit()
+        __print_usage_and_die__()
     if sys.argv[1]!="clear":
-        exit()
+        __print_usage_and_die__()
     Cache.clear()
     
