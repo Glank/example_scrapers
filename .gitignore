@@ -55,3 +55,8 @@ docs/_build/
 #scraper cache
 cache/
 cache_index.pkl
+
+#build stuff
+BeautifulSoup.py
+BeautifulSoup.pyc
+selenium/
