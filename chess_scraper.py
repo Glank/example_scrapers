@@ -1,6 +1,5 @@
 #Author: Ernest Kirstein
 
-from simple_cache import Cache
 from BeautifulSoup import BeautifulSoup
 import urllib2   
 
